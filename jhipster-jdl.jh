@@ -1,0 +1,59 @@
+
+enum Location_Type {
+    HOME, WORK, OTHER
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Address {
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String,
+    type Location_Type
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Email {
+	emailAddress String,
+    type Location_Type
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Phone {
+	phoneNumber String,
+    type Location_Type
+}
+
+
+/**
+ * The Employee entity.
+ */
+entity Contact {
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+	lastName String,
+	title String,
+	organization String
+}
+relationship OneToMany {
+ Contact{phone} to Phone{contact}
+ Contact{email} to Email{contact}
+ Contact{address} to Address{contact}
+}
+
+
+// Set pagination options
+paginate Contact,Email,Phone,Address with infinite-scroll
+paginate Contact,Email,Phone,Address with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+// Set an angular suffix
+angularSuffix * with mySuffix
