@@ -15,7 +15,7 @@ node {
     }
     
     stage('Instal Gcc and make'){
-        sh "yum install -y gcc-c++ make"
+        sh "sudo yum install -y gcc-c++ make"
     }
     
     stage('install tools') {
