@@ -13,6 +13,18 @@ node {
         sh "chmod +x mvnw"
         sh "./mvnw clean"
     }
+    
+    stage('check npm'){
+        sh "npm -v"
+    }
+    
+    stage('check node'){
+        sh "node -v"
+    }
+    
+    stage('check yarn'){
+        sh "yarn -v"
+    }
 
     stage('install tools') {
         sh "./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-yarn -DnodeVersion=v8.9.4 -DyarnVersion=v1.5.1"
