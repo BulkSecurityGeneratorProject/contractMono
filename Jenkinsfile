@@ -14,14 +14,14 @@ node {
         sh "./mvnw clean"
     }
     
-    stage('Instal Gcc and make'){
-        sh "sudo yum install -y gcc-c++ make"
-    }
     
     stage('install tools') {
         sh "./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-yarn -DnodeVersion=v8.9.4 -DyarnVersion=v1.5.1"
     }
     
+     stage('yarn install') {
+        sh "./mvnw com.github.eirslett:frontend-maven-plugin:node"
+    }
 
     stage('yarn install') {
         sh "./mvnw com.github.eirslett:frontend-maven-plugin:yarn"
