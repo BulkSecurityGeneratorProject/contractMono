@@ -19,6 +19,14 @@ node {
         sh "./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-yarn -DnodeVersion=v8.9.4 -DyarnVersion=v1.5.1"
     }
     
+    stage('Check Version of Yarn'){
+        sh "yarn -version"
+    }
+    
+    stage('Check Version of Yarn'){
+        sh "yarn -version"
+    }
+    
     stage('backend tests') {
         try {
             sh "./mvnw test"
