@@ -14,9 +14,6 @@ node {
         sh "./mvnw clean"
     }
     
-    stage('check npm'){
-        sh "npm -v"
-    }
     
     stage('check node'){
         sh "node -v"
@@ -24,6 +21,10 @@ node {
     
     stage('check yarn'){
         sh "yarn -v"
+    }
+    
+     stage('check npm'){
+        sh "npm -v"
     }
 
     stage('install tools') {
