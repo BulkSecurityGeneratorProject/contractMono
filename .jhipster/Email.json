@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "contact",
+            "otherEntityName": "contact",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "emailAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "Location_Type",
+            "fieldValues": "HOME,WORK,OTHER"
+        }
+    ],
+    "changelogDate": "20180307052432",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "email",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix"
+}

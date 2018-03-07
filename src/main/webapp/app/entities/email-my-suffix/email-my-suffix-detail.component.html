@@ -1,0 +1,36 @@
+
+<div *ngIf="email">
+    <h2><span>Email</span> {{email.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Email Address</span></dt>
+        <dd>
+            <span>{{email.emailAddress}}</span>
+        </dd>
+        <dt><span>Type</span></dt>
+        <dd>
+            <span>{{email.type}}</span>
+        </dd>
+        <dt><span>Contact</span></dt>
+        <dd>
+            <div *ngIf="email.contactId">
+                <a [routerLink]="['/contact-my-suffix', email.contactId]">{{email.contactId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'email-my-suffix/'+ email.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>

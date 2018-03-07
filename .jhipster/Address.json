@@ -1,0 +1,42 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "contact",
+            "otherEntityName": "contact",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "streetAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "postalCode",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stateProvince",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "Location_Type",
+            "fieldValues": "HOME,WORK,OTHER"
+        }
+    ],
+    "changelogDate": "20180307052431",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "address",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix"
+}

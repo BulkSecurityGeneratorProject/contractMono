@@ -1,0 +1,50 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "phone",
+            "otherEntityName": "phone",
+            "otherEntityRelationshipName": "contact"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "email",
+            "otherEntityName": "email",
+            "otherEntityRelationshipName": "contact"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "address",
+            "otherEntityName": "address",
+            "otherEntityRelationshipName": "contact"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "javadoc": "The firstname attribute.",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "organization",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180307052434",
+    "javadoc": "The Employee entity.",
+    "entityTableName": "contact",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix"
+}
